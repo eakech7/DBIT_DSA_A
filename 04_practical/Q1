@@ -1,0 +1,15 @@
+def reverse_list(lst):
+    return lst[::-1]
+
+def rotate_list(lst, k):
+    if not lst:
+        return lst
+    k = k % len(lst)  
+    return lst[-k:] + lst[:-k]
+
+original_list = [1, 2, 3, 4, 5]
+
+print("Original List:", original_list)
+print("Reversed List:", reverse_list(original_list))
+print("Rotated List (by 2):", rotate_list(original_list, 2))
+

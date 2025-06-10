@@ -1,0 +1,13 @@
+def char_frequencies(s):
+    freq = {}
+    for char in s:
+        if char.isalpha():  
+            freq[char] = freq.get(char, 0) + 1
+    return freq
+
+input_str = "data structures and algorithms"
+frequencies = char_frequencies(input_str)
+
+print("Character frequencies:")
+for char, count in frequencies.items():
+    print(f"{char}: {count}")
